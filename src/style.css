@@ -102,6 +102,7 @@ button {
 
 .content {
   width: clamp(500px, 1400px, 90%);
+  text-align: center;
 }
 
 /* HEADER  */
@@ -122,10 +123,11 @@ h1 {
   font-weight: 400;
 }
 
-ul {
+header ul {
   display: flex;
   gap: 2em;
   font-size: 2rem;
+  font-style: italic;
 }
 
 li .selected,
@@ -157,4 +159,33 @@ p.home {
   margin-top: 150px;
   text-decoration: underline orangered solid 9px;
   line-height: 2.5em;
+}
+
+/* MENU  */
+h2.menu {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 3em;
+}
+
+.menu-title {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+.menu-content {
+  font-size: 1.3em;
+}
+
+ul.menu li {
+  padding: 20px;
+}
+
+ul.menu {
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 40px;
+  border-bottom: 4px solid orangered;
 }
