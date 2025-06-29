@@ -1,5 +1,7 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,18 +25,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -42,63 +57,104 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /* GENERAL STYLING  */
 
 body {
-    display: flex;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eee;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    appearance: none;
-    background-color: rgb(0, 0, 0, 0);
-    border: none;
-    color: white;
-    font-weight: bold;
+  appearance: none;
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  width: clamp(500px, 1400px, 90%);
 }
 
 /* HEADER  */
 
 header {
-    background-color: black;
-    color: white;
-    width: clamp(500px, 1400px, 90%);
-    border-radius: 20px;
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px clamp(80px, 80px, 20px);
+  background-color: black;
+  color: white;
+  width: clamp(500px, 1400px, 90%);
+  border-radius: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px clamp(80px, 80px, 20px);
 }
 
 h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 ul {
-    display: flex;
-    gap: 2em;
-    font-size: 2rem;
+  display: flex;
+  gap: 2em;
+  font-size: 2rem;
 }
 
-li .selected, button:hover {
-    border-bottom : 10px solid orangered;
+li .selected,
+button:hover {
+  border-bottom: 10px solid orangered;
+}
+
+/* HOME  */
+.home {
+  text-align: center;
+}
+
+h2.home {
+  appearance: none;
+  font-weight: 100;
+  font-size: 4em;
+  margin-top: 1.5em;
+}
+
+h2.home strong {
+  font-weight: 500;
+}
+
+p.home {
+  font-size: 1.2em;
+  border: none;
+  width: fit-content;
+  margin: auto;
+  margin-top: 150px;
+  text-decoration: underline orangered solid 9px;
+  line-height: 2.5em;
 }
