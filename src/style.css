@@ -117,6 +117,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px clamp(80px, 80px, 20px);
+  height : 120px;
 }
 
 h1 {
@@ -132,7 +133,7 @@ header ul {
 
 li .selected,
 button:hover {
-  border-bottom: 10px solid orangered;
+  text-decoration: underline 10px solid orangered;
 }
 
 /* HOME  */
@@ -193,11 +194,13 @@ ul.menu {
 /* ABOUT  */
 .content-box {
   margin: auto;
-  margin-top: 150px;
+  margin-top: 120px;
   width: clamp(500px, 500px, 90%);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border : 8px solid orangered;
+  padding: 40px;
 }
 
 .content-box h2 {
